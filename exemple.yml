@@ -1,0 +1,10 @@
+interval: 1h
+timeout: 5s
+trigger: -96h
+domains:
+- ya.ru:443
+- www.google.com:443
+notification:
+  telegram:
+    token: ''
+    chatId: 1
