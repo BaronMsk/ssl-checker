@@ -5,5 +5,5 @@ RUN go get -d -v
 RUN CGO_ENABLED=0 GOOS=linux go build
 
 FROM alpine:3.10
-COPY --from=builder /go/src/github.com/BaronMsk/ssl-checker /ssl-checker
-ENTRYPOINT ["ssl-checker"]
+COPY --from=builder /go/src/github.com/BaronMsk/ssl-checker/ssl-checker /ssl-checker
+CMD ["/ssl-checker"]
